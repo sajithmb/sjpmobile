@@ -4,11 +4,9 @@ import {createAppContainer, NavigationEvents} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import BackgrounImage from '../assets/img/signup.png';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 
-export default class Home extends React.Component{
-    constructor(props){
-        super(props);
-    }
+class Home extends React.Component{
     render(){
         return(
             <View style={StyleSheet.container}>
@@ -17,6 +15,40 @@ export default class Home extends React.Component{
         );
     }
 }
+class Settings extends React.Component{
+    render(){
+        return(
+            <View style={StyleSheet.container}>
+                <Text>Settings</Text>
+            </View>
+        );
+    }
+}
+export default createMaterialBottomTabNavigator({
+    Home : { screen : Home,
+    navigationOptions :{
+        tabBarLabel: 'Home',
+        tabBarIcon:({tintColor})=>(
+            <Icon name="ios-home" color={tintColor} size={24}/>
+        )
+    }},
+    Settings : {screen : Settings,
+        navigationOptions :{
+            tabBarLabel: 'Settings',
+            tabBarIcon:({tintColor})=>(
+                <Icon name="ios-settings" color={tintColor} size={24}/>
+            )
+    }},
+},{
+    initialRouteName : 'Home',
+    activeColor : '#ffffff',
+    barStyle : {
+        backgroundColor : '#590004',
+    },
+    inactiveColor : '#c1292c',
+    shifting : true,
+});
+
 const styles = StyleSheet.create({
     container : {
         flex : 1,
