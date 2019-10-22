@@ -30,7 +30,7 @@ export default createMaterialBottomTabNavigator({
         tabBarLabel: 'Home',
         tabBarIcon:({tintColor})=>(
             <Icon name="ios-home" color={tintColor} size={24}/>
-        )
+        ),
     }},
     Settings : {screen : Settings,
         navigationOptions :{
