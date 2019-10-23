@@ -5,15 +5,19 @@ import {createStackNavigator} from 'react-navigation-stack';
 import BackgrounImage from '../assets/img/signup.png';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
+import { SliderBox } from 'react-native-image-slider-box';
 
 class Home extends React.Component{
     constructor(props){
         super(props);
+        this.state = {
+            images: ['https://source.unsplash.com/1024x768/?nature', 'http://10.32.10.121/sjpweb/img/mobileHomeSlides/new-banner.png']
+        };
     }
     render(){
         return(
             <View style={StyleSheet.container}>
-                
+                <SliderBox images={this.state.images} />
             </View>
         );
     }
