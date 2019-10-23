@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, ImageBackground, TextInput, TouchableOpacity, KeyboardAvoidingView, Picker} from 'react-native';
+import {View, Text, StyleSheet, ImageBackground, TextInput, TouchableOpacity, KeyboardAvoidingView, Picker,ScrollView, SafeAreaView} from 'react-native';
 import {createAppContainer, NavigationEvents} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import BackgrounImage from '../assets/img/signup.png';
@@ -7,19 +7,29 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 
 class Home extends React.Component{
+    constructor(props){
+        super(props);
+    }
     render(){
         return(
             <View style={StyleSheet.container}>
-                <Text>Home</Text>
+                <View style={{alignContent : 'center', alignItems : 'center', backgroundColor : '#590004'}}>
+                    <Text style={{ fontWeight : 'bold', color : '#ffffff', marginTop : 5, marginBottom : 15, fontSize : 18,}}>Home</Text>
+                </View>
             </View>
         );
     }
 }
 class Settings extends React.Component{
+    constructor(props){
+        super(props);
+    }
     render(){
         return(
             <View style={StyleSheet.container}>
-                <Text>Settings</Text>
+                <View style={{alignContent : 'center', alignItems : 'center', backgroundColor : '#590004'}}>
+                    <Text style={{ fontWeight : 'bold', color : '#ffffff', marginTop : 5, marginBottom : 15, fontSize : 18,}}>Settings</Text>
+                </View>
             </View>
         );
     }
