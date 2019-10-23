@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, ImageBackground, TextInput, TouchableOpacity, KeyboardAvoidingView, Picker,ScrollView, SafeAreaView} from 'react-native';
+import {View, Text, StyleSheet, ImageBackground, TextInput, TouchableOpacity, KeyboardAvoidingView, Picker,ScrollView, SafeAreaView,Image} from 'react-native';
 import {createAppContainer, NavigationEvents} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import BackgrounImage from '../assets/img/signup.png';
@@ -13,9 +13,7 @@ class Home extends React.Component{
     render(){
         return(
             <View style={StyleSheet.container}>
-                <View style={{alignContent : 'center', alignItems : 'center', backgroundColor : '#590004'}}>
-                    <Text style={{ fontWeight : 'bold', color : '#ffffff', marginTop : 5, marginBottom : 15, fontSize : 18,}}>Home</Text>
-                </View>
+                
             </View>
         );
     }
@@ -64,5 +62,6 @@ const styles = StyleSheet.create({
         flex : 1,
         alignContent :'center',
         alignItems : 'center',
+        width : '100%',
     }
 });
